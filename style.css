@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gellix';
+    scroll-behavior: smooth;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.text-gradient {
+    background-image: linear-gradient(135deg, #1418A6 0%, #8D6491 100%);
+    color: transparent;
+    background-clip: text;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.protest-riot-regular {
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.protest-riot {
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.protest-guerrilla-regular {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 110%;
+}
+
+.links{
+    transition: all 0.3s ease-in-out;
+}
+
+.links:hover {
+    background-image: linear-gradient(135deg, #1418A6 0%, #8D6491 100%);
+    color: transparent;
+    background-clip: text;
+    font-size: 1.7rem;
+    filter: invert(0);
+}
+
+.project{
+    transition: all 0.3s ease-in-out;
+    line-height: 110%;
+   
+}
+
+.outerdiv
+{
+    transition: all 0.3s ease-in-out;
+    
+}
+
+
+.project:hover{
+    font-size: 6.5vw;
+    
+}
+
+.image{
+    transition: all 0.2s ease-in-out;
+    
+}
+.img1,.img3{
+    
+    animation: slideright 0.7s ease-in-out  ;
+}
+.img2,.img4{
+    
+    animation: slideleft 0.7s ease-in-out  ;
+}
+
+@keyframes slideright{
+    0%{
+        transform:  translateX(-100%);
+    }
+    100%{
+        transform:  translateX(0%);
+    }
+}
+@keyframes slideleft{
+    0%{
+        transform:  translateX(100%);
+    }
+    100%{
+        transform:  translateX(0%);
+    }
+}
+
+
+
+
+.card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+}
+
+.card h1 {
+    border-image: linear-gradient(135deg, #ffffff 0%, #dadada 100%);
+    border-image-slice: 1;
+    color: #ffffff;
+}
+
+.card ul li {
+    transition: color 0.3s ease;
+}
+
+.card ul li:hover {
+    color: #ffffff;
+}
+
