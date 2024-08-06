@@ -98,26 +98,33 @@ typeWriterEffect();
 // logArrayValues()
 // setInterval(logArrayValues,12500);
 
+let intervalId; // Declare a variable to hold the interval ID
+
 function logArrayValues() {
     project.forEach((elem, index) => {
-      // Schedule each project's processing at staggered intervals
-      setTimeout(() => {
-        const dataImage = elem.getAttribute('data-image');
-        const image = elem.getAttribute('image');
-        projectImage.src = dataImage;
-        elem.classList.add("text-gradient");
-  
-        
+        // Schedule each project's processing at staggered intervals
         setTimeout(() => {
-          elem.classList.remove("text-gradient");
-        }, 3999); 
-      }, 4000 * index);
-    });
-  }
-  
-  
-  logArrayValues();
-  
+            const dataImage = elem.getAttribute('data-image');
+            projectImage.src = dataImage;
+            elem.classList.add("text-gradient");
 
-  const totalDuration = project.length * 4000;
-  setInterval(logArrayValues, totalDuration);
+            setTimeout(() => {
+                elem.classList.remove("text-gradient");
+            }, 2999);
+        }, 3000 * index);
+    });
+}
+
+logArrayValues();
+
+const totalDuration = project.length * 3000;
+intervalId = setInterval(logArrayValues, totalDuration); // Store the interval ID
+
+// Add event listener for visibility change
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        clearInterval(intervalId); // Clear the interval when the tab is not active
+    } else {
+        intervalId = setInterval(logArrayValues, totalDuration); // Restart the interval when the tab is active
+    }
+});
