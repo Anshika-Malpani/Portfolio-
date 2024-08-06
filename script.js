@@ -103,7 +103,9 @@ function logArrayValues() {
       // Schedule each project's processing at staggered intervals
       setTimeout(() => {
         const dataImage = elem.getAttribute('data-image');
+        const image = elem.getAttribute('image');
         projectImage.src = dataImage;
+        projectImage.poster=image
         elem.classList.add("text-gradient");
   
         
