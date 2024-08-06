@@ -105,7 +105,6 @@ function logArrayValues() {
         const dataImage = elem.getAttribute('data-image');
         const image = elem.getAttribute('image');
         projectImage.src = dataImage;
-        projectImage.poster=image
         elem.classList.add("text-gradient");
   
         
