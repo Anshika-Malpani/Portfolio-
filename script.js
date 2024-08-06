@@ -118,9 +118,9 @@ function logArrayValues() {
 logArrayValues();
 
 const totalDuration = project.length * 3000;
-intervalId = setInterval(logArrayValues, totalDuration); // Store the interval ID
+intervalId = setInterval(logArrayValues, totalDuration); 
 
-// Add event listener for visibility change
+
 document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
         clearInterval(intervalId); // Clear the interval when the tab is not active
@@ -128,3 +128,70 @@ document.addEventListener("visibilitychange", () => {
         intervalId = setInterval(logArrayValues, totalDuration); // Restart the interval when the tab is active
     }
 });
+
+function skillsAnimation(){
+    gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from("#skills-section", {
+            scrollTrigger: {
+                trigger: "#skills-section",
+                start: "top 80%",
+                toggleActions: "play none none reverse",
+                
+            },
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.2,
+
+        });
+        gsap.fromTo(".skill-card", 
+            {opacity: 0,  scale: 0}, // Added scale for smoother entrance
+            {
+            scrollTrigger: {
+                trigger: ".skill-card",
+                start: "top 80%",
+                // toggleActions: "play none none reverse",
+                
+                
+            },
+            opacity: 1,
+            scale: 1, // Scale back to normal
+            duration: 1, // Added easing for smoothness
+            
+        });
+
+        
+}
+
+function aboutAnimation(){
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".about-text", {
+        scrollTrigger: {
+            trigger: ".about-text",
+            start: "top 80%", // Start animation when the top of the section hits 80% of the viewport height
+            toggleActions: "play none none reverse",
+            // markers:true
+        },
+        opacity: 0,
+        y: 80, // Move up 50 pixels
+        duration: 1,
+    });
+
+    gsap.from(".about-image", {
+        scrollTrigger: {
+            trigger: ".about-text",
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+            // markers:true
+        },
+        opacity: 0,
+        scale: 0.8, // Scale down to 80%
+        duration: 1,
+    });
+}
+
+
+skillsAnimation()
+aboutAnimation()

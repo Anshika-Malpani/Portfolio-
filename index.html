@@ -72,16 +72,16 @@
                     </div>
                 </div>
 
-                <div id="skill" class="w-full min-h-screen bg-[#1C1C20] py-10 px-4 md:px-16 flex flex-col items-center space-y-10">
-                    <section class="w-full py-10 px-4 md:px-16 text-center">
+                <div id="skill" class="w-full min-h-screen bg-[#1C1C20] py-10 px-4 md:px-16 flex flex-col items-center space-y-10" >
+                    <section id="skills-section" class="w-full py-10 px-4 md:px-16 text-center">
                         <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">My Skills</h2>
                         <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
                             I am a web developer with expertise in JavaScript delivering innovative and scalable web solutions with a focus on enhancing user experiences.
                         </p>
                     </section>
                     <div class="w-full flex flex-col md:flex-row items-center justify-evenly space-y-10 md:space-y-0 md:space-x-10">
-                        <div class="card flex flex-col border-[2px]  border-transparent rounded-lg w-[90%] md:w-[33vw] h-auto md:h-[49vh] p-6 md:p-10 transition-all duration-300 ease-in-out shadow-lg hover:shadow-2xl">
-                            <h1 class="text-[5vw] md:text-[2.5vw] border-b-[1px]  border-gray-500 leading-tight mb-4 text-gray-200 uppercase font-semibold">
+                        <div class="card skill-card flex flex-col border-[2px] border-transparent rounded-lg w-[90%] md:w-[33vw] h-auto md:h-[49vh] p-6 md:p-10 transition-all duration-300 ease-in-out shadow-lg hover:shadow-2xl">
+                            <h1 class="text-[5vw] md:text-[2.5vw] border-b-[1px] border-gray-500 leading-tight mb-4 text-gray-200 uppercase font-semibold">
                                 Frontend
                             </h1>
                             <ul class="py-5 space-y-3">
@@ -92,7 +92,7 @@
                                 <li class="text-lg md:text-xl text-gray-400 hover:text-white transition duration-300">Tailwind</li>
                             </ul>
                         </div>
-                        <div class="card flex flex-col border-[2px] border-transparent rounded-lg w-[90%] md:w-[33vw] h-auto md:h-[49vh] p-6 md:p-10 transition-all duration-300 ease-in-out shadow-lg hover:shadow-2xl">
+                        <div class="card skill-card flex flex-col border-[2px] border-transparent rounded-lg w-[90%] md:w-[33vw] h-auto md:h-[49vh] p-6 md:p-10 transition-all duration-300 ease-in-out shadow-lg hover:shadow-2xl">
                             <h1 class="text-[5vw] md:text-[2.5vw] border-b-[1px] border-gray-500 leading-tight mb-4 text-gray-200 uppercase font-semibold">
                                 Backend & Database
                             </h1>
@@ -109,28 +109,29 @@
         
 
 
-        <div id="about" class="w-full min-h-full bg-[#1C1C20] flex flex-wrap items-center justify-between py-10 px-6 md:px-16">
-            <div class="w-full md:w-[40%] flex flex-col gap-4 mb-10 md:mb-0">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">About Me</h2>
-                <h6 class="text-xl md:text-2xl text-gray-300 tracking-tight font-semibold">Hi, I'm Anshika Malpani!</h6>
-                <p class="text-base md:text-lg text-gray-400 text-justify tracking-tight">
-                    I am a passionate web developer with a strong foundation in JavaScript and modern frameworks. My journey in the tech world began at Poddar International College, where I earned my Bachelor of Computer Applications degree. My academic journey provided me with the technical knowledge and problem-solving skills essential for crafting dynamic and responsive web applications.
-                </p>
-                <h6 class="text-xl md:text-2xl text-gray-300 tracking-tight font-semibold mt-6">My Passion</h6>
-                <p class="text-base md:text-lg text-gray-400 text-justify tracking-tight">
-                    Web development isn't just a career for me—it's a passion. I thrive on the challenge of transforming complex problems into elegant, user-friendly solutions. Whether it's a simple website or a complex web application, I enjoy every step of the process, from conceptualization and design to coding and deployment. I aim to build web applications that not only meet the client's needs but also delight the end-users.
-                </p>
-            </div>
-            <div class="w-full md:w-[60%] h-[40vh] md:h-[80vh] flex items-center justify-center ">
-                <div  class=" w-[80%] md:w-[60%] h-[85%] bg-slate-400 relative md:ml-24">
-                    <img  src="anshika1.png" alt="Anshika Malpani" class=" absolute left-0 top-0 md:left-10 md:top-8 w-full h-full object-cover shadow-lg">
+                <div id="about" class="w-full min-h-full bg-[#1C1C20] flex flex-wrap items-center justify-between py-10 px-6 md:px-16">
+                    <div class="w-full md:w-[40%] flex flex-col gap-4 mb-10 md:mb-0 about-text">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">About Me</h2>
+                        <h6 class="text-xl md:text-2xl text-gray-300 tracking-tight font-semibold">Hi, I'm Anshika Malpani!</h6>
+                        <p class="text-base md:text-lg text-gray-400 text-justify tracking-tight">
+                            I am a passionate web developer with a strong foundation in JavaScript and modern frameworks. My journey in the tech world began at Poddar International College, where I earned my Bachelor of Computer Applications degree. My academic journey provided me with the technical knowledge and problem-solving skills essential for crafting dynamic and responsive web applications.
+                        </p>
+                        <h6 class="text-xl md:text-2xl text-gray-300 tracking-tight font-semibold mt-6">My Passion</h6>
+                        <p class="text-base md:text-lg text-gray-400 text-justify tracking-tight">
+                            Web development isn't just a career for me—it's a passion. I thrive on the challenge of transforming complex problems into elegant, user-friendly solutions. Whether it's a simple website or a complex web application, I enjoy every step of the process, from conceptualization and design to coding and deployment. I aim to build web applications that not only meet the client's needs but also delight the end-users.
+                        </p>
+                    </div>
+                    <div class="w-full md:w-[60%] h-[40vh] md:h-[80vh] flex items-center justify-center about-image">
+                        <div class="w-[80%] md:w-[60%] h-[85%] bg-slate-400 relative md:ml-24">
+                            <img src="anshika1.png" alt="Anshika Malpani" class="absolute left-0 top-0 md:left-10 md:top-8 w-full h-full object-cover shadow-lg">
+                        </div>
+                    </div>
                 </div>
-                
-            </div>
-        </div>
         
 
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 
