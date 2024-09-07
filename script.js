@@ -30,9 +30,9 @@ function typeWriterEffect() {
     }
 
     function changing() {
-        typeWriter(span, 'ANSHIKA', 300, function () {
+        typeWriter(span, 'Anshika', 300, function () {
             setTimeout(function () {
-                typeWriter(span, 'A DEVELOPER', 300, changing);
+                typeWriter(span, 'a Developer', 300, changing);
             }, 1000);
         });
     }
@@ -195,3 +195,16 @@ function aboutAnimation(){
 
 skillsAnimation()
 aboutAnimation()
+
+// let heading=document.querySelectorAll(".heading")
+
+// gsap.from(".heading", {
+//     y: -60, // Start from below
+//     duration: 1.2,
+//     stagger: {
+//         amount: 0.5, // Total duration for staggered animations
+//         from: "end" // Start from the last element
+//     },
+    
+// });
+
